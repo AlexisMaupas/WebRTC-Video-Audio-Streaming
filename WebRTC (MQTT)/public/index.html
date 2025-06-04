@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebRTC Video</title>
+</head>
+<body>
+    <h1>WebRTC Video Chat MQTT</h1>
+    <div style="width: 100%; display: flex; flex-direction: row; justify-content: space-around;" >
+        <div style="width:50%; height: 100%; text-align: center;">
+            <h2>Local Video</h2>
+            <video id="localVideo" style="width: 100%; border:1px solid #000" autoplay muted playsinline></video>
+        </div>
+        <div style="width:50%; height: 100%; text-align: center;">
+            <h2>Remote Video</h2>
+            <video id="remoteVideo" style=" width: 100%; ;border:1px solid #000" autoplay playsinline></video>
+        </div>
+    </div>
+
+    <label for="room">Room name:</label>
+    <input type="text" id="room" placeholder="my-room" />   
+    <button  onclick="startConnection()">Start</button>
+    <button onclick="stopConnection()">Stop</button>
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

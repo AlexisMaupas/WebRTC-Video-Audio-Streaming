@@ -1,0 +1,126 @@
+/* Fullscreen base */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #121212;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.call-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Top input + button */
+.top-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 3rem;
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+    letter-spacing: 1px;
+  }
+
+.room-input {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #1e1e1e;
+  color: white;
+  width: 200px;
+}
+
+.connect-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease;
+}
+.connect-btn.start {
+  background-color: #2e8b57;
+}
+.connect-btn.stop {
+  background-color: #c62828;
+}
+.connect-btn:hover {
+  opacity: 0.9;
+}
+
+/* Video area */
+.videos {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.video-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-block h2 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ccc;
+}
+
+video {
+  width: 320px;
+  height: 240px;
+  background: black;
+  border-radius: 12px;
+  border: 2px solid #2e2e2e;
+  object-fit: cover;
+}
+
+/* Responsive for very small screens */
+@media (max-height: 500px) {
+  .videos {
+    flex-direction: column;
+  }
+
+  video {
+    width: 90vw;
+    height: auto;
+  }
+}
+
+.media-btn {
+    padding: 8px 14px;
+    margin-left: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .media-btn:hover {
+    background-color: #666;
+  }
