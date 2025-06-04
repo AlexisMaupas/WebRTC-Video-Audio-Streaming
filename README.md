@@ -27,7 +27,7 @@ npm install
 npm run dev
 ```
 
-### 1. WebRTC (MQTT)
+### 2. WebRTC (MQTT)
 
 **Location:** `/WebRTC (MQTT)`
 
